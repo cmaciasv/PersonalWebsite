@@ -134,7 +134,9 @@ playwright-report/
 
 .bmad-core/
 .gemini/
+web-bundles/
 docs/
+
 
 # misc
 *.zip

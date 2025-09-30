@@ -132,6 +132,10 @@ playwright-report/
 # VSCode
 .vscode/
 
+.bmad-core/
+.gemini/
+docs/
+
 # misc
 *.zip
 *.rar

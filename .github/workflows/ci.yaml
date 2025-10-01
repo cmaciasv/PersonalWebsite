@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Lint for apps/web
+        run: npm run lint --workspace=apps/web
+
+      - name: Run Tests for apps/web
+        run: npm run test --workspace=apps/web
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Build Next.js app
+        run: npm run build --workspace=apps/web
+
+      - name: Start Next.js app
+        run: npm run start --workspace=apps/web &
+
+      - name: Run Playwright tests
+        run: npx playwright test

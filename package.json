@@ -1,0 +1,33 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "A personal website to showcase my projects and skills.",
+  "packageManager": "npm@11.6.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "turbo run test",
+    "dev:web": "npm run dev --workspace=apps/web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmaciasv/PersonalWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cmaciasv/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/cmaciasv/PersonalWebsite#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "turbo": "^2.5.8"
+  }
+}

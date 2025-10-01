@@ -4,15 +4,6 @@ test('has title', async ({ page }) => {
   await page.goto('/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle("Create Next App");
+  await expect(page).toHaveTitle("Personal Portfolio Website");
 });
 
-test('read our docs link', async ({ page }) => {
-  await page.goto('/');
-
-  // Click the "Read our docs" link.
-  await page.getByRole('link', { name: 'Read our docs' }).click();
-
-  // Expects page to navigate to the docs page.
-  await expect(page).toHaveURL("http://localhost:3000/");
-});

@@ -1,4 +1,4 @@
-import { Project } from "../../../../packages/shared/src/types/project";
+import { Project } from "@shared/types/project";
 
 export const projects: Project[] = [
   {

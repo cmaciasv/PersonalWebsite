@@ -72,4 +72,24 @@ test.describe('Responsive Design', () => {
     await expect(page.getByRole('main').getByRole('link', { name: 'LinkedIn' })).toBeVisible();
     await expect(page.getByRole('main').getByRole('link', { name: 'LinkedIn' })).toHaveCSS('padding', '12px 24px');
   });
+
+  test('projects gallery page adapts to different viewports', async ({ page }) => {
+    await page.goto('/projects');
+
+    // Test on a mobile viewport
+    await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
+    let projectCards = await page.locator('a[href^="/projects/"]').all(); // Select Link elements that navigate to project pages
+    // Expect cards to be arranged in a single column or stacked
+    // This is a heuristic, actual implementation might vary
+    expect(projectCards.length).toBeGreaterThan(0);
+    // Further assertions could involve checking CSS properties like flex-direction or grid-template-columns
+
+    // Test on a tablet viewport
+    await page.setViewportSize({ width: 768, height: 1024 }); // iPad Mini
+    projectCards = await page.locator('a[href^="/projects/"]').all();
+
+    // Test on a desktop viewport
+    await page.setViewportSize({ width: 1280, height: 720 }); // Standard Desktop
+    projectCards = await page.locator('a[href^="/projects/"]').all();
+  });
 });

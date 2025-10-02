@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import ProjectsPage from './page';
-import { projects } from '../../lib/data';
+import { projects } from '../../lib/data'; // Import actual projects data
 import ProjectCard from '@/features/projects/components/ProjectCard';
 
 // Mock the ProjectCard component to simplify testing ProjectsPage
@@ -25,5 +25,25 @@ describe('ProjectsPage', () => {
     projects.forEach((project) => {
       expect(screen.getByText(project.title)).toBeInTheDocument();
     });
+  });
+
+  it('renders a message when no projects are found', () => {
+    // Temporarily mock the projects array to be empty for this test
+    const originalProjects = [...projects]; // Save original projects
+    projects.length = 0; // Clear the array
+
+    render(<ProjectsPage />);
+
+    // Check if the heading is rendered
+    expect(screen.getByRole('heading', { name: /Projects/i })).toBeInTheDocument();
+
+    // Check if the "No projects found." message is displayed
+    expect(screen.getByText('No projects found.')).toBeInTheDocument();
+
+    // Check that no ProjectCard components are rendered
+    expect(screen.queryAllByTestId('project-card')).toHaveLength(0);
+
+    // Restore original projects data
+    projects.splice(0, 0, ...originalProjects);
   });
 });

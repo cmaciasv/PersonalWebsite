@@ -4,7 +4,10 @@ import { Project } from '@shared/types/project';
 
 // Mock next/image and next/link
 vi.mock('next/image', () => ({
-  default: ({ src, alt, ...props }) => <img src={src} alt={alt} {...props} />,
+  default: vi.fn((props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} src={props.src as string} />;
+  }),
 }));
 vi.mock('next/link', () => ({
   default: ({ children, href }) => <a href={href}>{children}</a>,
@@ -15,7 +18,7 @@ describe('ProjectCard', () => {
     id: '1',
     title: 'Test Project',
     description: 'A description for the test project.',
-    image: '/images/test-project.jpg',
+    image_url: '/images/test-project.jpg',
     tags: ['React', 'Next.js'],
     githubUrl: 'https://github.com/test/test-project',
     liveUrl: 'https://test-project.com',
@@ -30,7 +33,7 @@ describe('ProjectCard', () => {
     // Check if the image is rendered with correct src and alt
     const image = screen.getByAltText(mockProject.title);
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', mockProject.image);
+    expect(image).toHaveAttribute('src', mockProject.image_url);
   });
 
   it('has the correct link to the project detail page', () => {

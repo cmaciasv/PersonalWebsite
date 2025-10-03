@@ -18,3 +18,7 @@ export const projects: Project[] = [
     live_demo_url: "https://example.com/project-two-demo",
   },
 ];
+
+export async function getProjectById(id: string): Promise<Project | undefined> {
+  return projects.find((project) => project.id === id);
+}

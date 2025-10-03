@@ -1,7 +1,7 @@
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import ProjectsPage from './page';
 import { projects } from '../../lib/data'; // Import actual projects data
-import ProjectCard from '@/features/projects/components/ProjectCard';
 
 // Mock the ProjectCard component to simplify testing ProjectsPage
 vi.mock('../../features/projects/components/ProjectCard', () => ({

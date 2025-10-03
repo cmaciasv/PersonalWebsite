@@ -1,3 +1,4 @@
+import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import ProjectCard from './ProjectCard';
 import { Project } from '@shared/types/project';
@@ -6,22 +7,20 @@ import { Project } from '@shared/types/project';
 vi.mock('next/image', () => ({
   default: vi.fn((props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} src={props.src as string} />;
+    return <img {...props} src={props.src as string} alt={props.alt || ''} />;
   }),
 }));
 vi.mock('next/link', () => ({
-  default: ({ children, href }) => <a href={href}>{children}</a>,
+  default: ({ children, href }: { children: React.ReactNode; href: string }) => <a href={href}>{children}</a>,
 }));
 
 describe('ProjectCard', () => {
   const mockProject: Project = {
     id: '1',
     title: 'Test Project',
-    description: 'A description for the test project.',
     image_url: '/images/test-project.jpg',
-    tags: ['React', 'Next.js'],
-    githubUrl: 'https://github.com/test/test-project',
-    liveUrl: 'https://test-project.com',
+    short_description: 'This is a test project.',
+    case_study_content: 'Detailed case study content for the test project.',
   };
 
   it('renders the project title and image', () => {

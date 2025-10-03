@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../components/ui/Link';
 
 export default function HomePage() {
   return (
@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className="mt-8 flex items-center justify-center">
           <Link
             href="/projects"
-            className="inline-flex items-center justify-center rounded-md bg-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent-teal px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-teal-dark focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
           >
             View My Work
           </Link>

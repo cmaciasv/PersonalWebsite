@@ -24,3 +24,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.link-hover-light {
+  @apply hover:text-gray-100;
+}
+
+.bg-primary-dark {
+  @apply bg-gray-800;
+}
+.bg-accent-teal {
+  @apply bg-teal-500;
+}
+.hover-bg-accent-teal-dark {
+  @apply hover:bg-teal-600;
+}
+.bg-accent-blue {
+  @apply bg-blue-600;
+}
+.hover-bg-accent-blue-dark {
+  @apply hover:bg-blue-700;
+}
+.hover-bg-primary-darker {
+  @apply hover:bg-gray-900;
+}
+.bg-accent-blue-dark {
+  @apply bg-blue-700;
+}
+.hover-bg-accent-blue-darker {
+  @apply hover:bg-blue-800;
+}
+.bg-accent-blue-light {
+  @apply bg-blue-700;
+}
+.hover-bg-accent-blue-dark {
+  @apply hover:bg-blue-800;
+}

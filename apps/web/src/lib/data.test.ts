@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { projects } from './data';
 
 describe('Project Data Structure', () => {

@@ -1,12 +1,22 @@
-import Link from 'next/link';
+import Link from '../ui/Link';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white p-4 mt-8">
-      <nav className="container mx-auto flex justify-center space-x-4">
-        <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">GitHub</Link>
-        <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">LinkedIn</Link>
-      </nav>
+    <footer className="bg-primary-dark text-white p-4 mt-8">
+      <div className="container mx-auto flex justify-between items-center">
+        <p>&copy; {new Date().getFullYear()} Carlos Macias</p>
+        <div className="flex space-x-4">
+          <Link href="https://github.com/cmaciasv" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <FaGithub size={32} />
+          </Link>
+          <Link href="https://linkedin.com/in/carlosamacias" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <FaLinkedin size={32} />
+          </Link>
+        </div>
+      </div>
     </footer>
   );
-}
+};
+
+export default Footer;

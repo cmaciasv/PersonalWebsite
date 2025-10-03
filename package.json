@@ -2,7 +2,6 @@
   "name": "personalwebsite",
   "version": "1.0.0",
   "description": "A personal website to showcase my projects and skills.",
-  "packageManager": "npm@11.6.0",
   "workspaces": [
     "apps/*"
   ],
@@ -27,7 +26,13 @@
   },
   "homepage": "https://github.com/cmaciasv/PersonalWebsite#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.55.1",
+    "axe-core": "^4.10.3",
     "turbo": "^2.5.8"
+  },
+  "dependencies": {
+    "axe-playwright": "^2.2.2",
+    "react-icons": "^5.5.0"
   }
 }

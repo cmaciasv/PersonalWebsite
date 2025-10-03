@@ -1,16 +1,46 @@
-import React from 'react';
+import Link from '../../../components/ui/Link';
+import Image from 'next/image';
+import { getProjectById } from '../../../lib/data';
+import { notFound } from 'next/navigation';
 
 interface ProjectDetailPageProps {
   params: { projectId: string };
 }
 
-const ProjectDetailPage = ({ params }: ProjectDetailPageProps) => {
+const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
+  // Explicitly await params to satisfy Next.js linter, even though it's typically an object.
+  const resolvedParams = await params;
+  const projectId: string = resolvedParams.projectId;
+  const project = await getProjectById(projectId);
+
+  if (!project) {
+    notFound();
+  }
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-8">Project Detail Page</h1>
-      <p>Project ID: {params.projectId}</p>
-      <p>This is a placeholder for the project detail page.</p>
-    </div>
+    <main className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
+      <p className="text-lg mb-4">{project.short_description}</p>
+      <Image src={project.image_url} alt={project.title} width={1200} height={600} className="w-full h-64 object-cover mb-4" priority={true} />
+      <div className="prose lg:prose-xl mb-8">
+        <p>{project.case_study_content}</p>
+      </div>
+      {project.live_demo_url && (
+        <a
+          href={project.live_demo_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-accent-blue-light hover-bg-accent-blue-dark text-white font-bold py-2 px-4 rounded"
+        >
+          Live Demo
+        </a>
+      )}
+      <div className="mt-8">
+        <Link href="/projects" className="text-blue-700 hover:underline">
+          &larr; Back to Projects
+        </Link>
+      </div>
+    </main>
   );
 };
 

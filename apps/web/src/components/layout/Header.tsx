@@ -1,15 +1,17 @@
 "use client";
 
-import Link from 'next/link';
+import Link from '../ui/Link';
 import { useState } from 'react';
 
-export default function Header() {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <nav className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold">MyWebsite</div>
+    <header className="bg-primary-dark text-white p-4">
+      <nav aria-label="Main navigation" className="container mx-auto flex justify-between items-center">
+        <Link href="/" className="text-xl font-bold">
+          Carlos Macias
+        </Link>
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,22 +46,32 @@ export default function Header() {
         <ul
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-gray-800 md:bg-transparent flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
+          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary-dark md:bg-transparent flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
         >
           <li>
-            <Link href="/" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Link>
           </li>
           <li>
-            <Link href="/projects" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+            <Link href="/projects" onClick={() => setIsMenuOpen(false)}>
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-gray-300" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
+
+export default Header;

@@ -15,6 +15,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.0",
@@ -24,8 +25,10 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.0.4",
     "@vitest/ui": "^3.2.4",
+    "axe-core": "^4.10.3",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
+    "eslint-plugin-react": "^7.37.5",
     "jsdom": "^27.0.0",
     "tailwindcss": "^4",
     "typescript": "^5",

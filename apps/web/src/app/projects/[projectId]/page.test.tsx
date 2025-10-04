@@ -38,9 +38,10 @@ describe('ProjectDetailPage', () => {
     expect(screen.getByRole('heading', { name: mockProject.title })).toBeInTheDocument();
     expect(screen.getByText(mockProject.short_description)).toBeInTheDocument();
     expect(screen.getByText(mockProject.case_study_content)).toBeInTheDocument();
-    expect(screen.getByAltText(mockProject.title)).toHaveAttribute('src');
-    expect(screen.getByAltText(mockProject.title).getAttribute('src')).toMatch(/_next\/image/);
-    expect(screen.getByAltText(mockProject.title).getAttribute('src')).toContain(encodeURIComponent(mockProject.image_url));
+    const image = screen.getByAltText('');
+    expect(image).toHaveAttribute('src');
+    expect(image.getAttribute('src')).toMatch(/_next\/image/);
+    expect(image.getAttribute('src')).toContain(encodeURIComponent(mockProject.image_url));
     expect(screen.getByRole('link', { name: 'Live Demo' })).toHaveAttribute('href', mockProject.live_demo_url);
     expect(screen.getByRole('link', { name: '← Back to Projects' })).toHaveAttribute('href', '/projects');
   });

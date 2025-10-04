@@ -30,4 +30,15 @@ describe('HomePage', () => {
     const button = screen.getByRole('link', { name: /View My Work/i });
     expect(button).toHaveAttribute('href', '/projects');
   });
+
+  it('applies fade-in animation to the main heading', () => {
+    render(<HomePage />);
+    const heading = screen.getByRole('heading', {
+      name: /Carlos Macias: Engineer, Creator, Problem-Solver./i,
+    });
+
+    // Check for initial animation properties (Framer Motion applies these as inline styles)
+    expect(heading).toHaveStyle('opacity: 0');
+    expect(heading).toHaveStyle('transform: translateY(20px)');
+  });
 });

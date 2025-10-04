@@ -21,7 +21,7 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
     <main className="container mx-auto p-4">
       <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
       <p className="text-lg mb-4">{project.short_description}</p>
-      <Image src={project.image_url} alt={project.title} width={1200} height={600} className="w-full h-64 object-cover mb-4" priority={true} />
+      <Image src={project.image_url} alt="" width={1200} height={600} className="w-full h-64 object-cover mb-4" priority={true} />
       <div className="prose lg:prose-xl mb-8">
         <p>{project.case_study_content}</p>
       </div>

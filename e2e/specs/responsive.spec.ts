@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
+import { runAccessibilityCheck } from '../utils/a11y-check';
 
 test.describe('Responsive Design', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await runAccessibilityCheck(page);
   });
 
   test('navigation menu adapts to mobile', async ({ page }) => {
@@ -42,12 +44,14 @@ test.describe('Responsive Design', () => {
     // Navigate to About page and check content
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'About' }).click();
+    await runAccessibilityCheck(page);
     await expect(page.getByRole('heading', { name: 'About Me' })).toBeVisible();
     await expect(page.getByText('Senior Software Engineer with over 10 years of experience')).toBeVisible();
 
     // Navigate to Contact page and check content
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'Contact' }).click();
+    await runAccessibilityCheck(page);
     await expect(page.getByRole('heading', { name: 'Get in Touch' })).toBeVisible();
     await expect(page.getByText('I\'m always open to new opportunities and collaborations.')).toBeVisible();
   });
@@ -65,6 +69,7 @@ test.describe('Responsive Design', () => {
     // Navigate to Contact page and check buttons
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'Contact' }).click();
+    await runAccessibilityCheck(page);
     await expect(page.getByRole('link', { name: 'Email Me' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Email Me' })).toHaveCSS('padding', '12px 24px');
     await expect(page.getByRole('main').getByRole('link', { name: 'GitHub' })).toBeVisible();
@@ -72,24 +77,26 @@ test.describe('Responsive Design', () => {
     await expect(page.getByRole('main').getByRole('link', { name: 'LinkedIn' })).toBeVisible();
     await expect(page.getByRole('main').getByRole('link', { name: 'LinkedIn' })).toHaveCSS('padding', '12px 24px');
   });
+});
 
-  test('projects gallery page adapts to different viewports', async ({ page }) => {
-    await page.goto('/projects');
+test('projects gallery page adapts to different viewports', async ({ page }) => {
+  await page.goto('/projects');
+  await runAccessibilityCheck(page);
 
-    // Test on a mobile viewport
-    await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
-    let projectCards = await page.locator('a[href^="/projects/"]').all(); // Select Link elements that navigate to project pages
-    // Expect cards to be arranged in a single column or stacked
-    // This is a heuristic, actual implementation might vary
-    expect(projectCards.length).toBeGreaterThan(0);
-    // Further assertions could involve checking CSS properties like flex-direction or grid-template-columns
+  // Test on a mobile viewport
+  await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
+  let projectCards = await page.locator('a[href^="/projects/"]').all(); // Select Link elements that navigate to project pages
+  // Expect cards to be arranged in a single column or stacked
+  // This is a heuristic, actual implementation might vary
+  expect(projectCards.length).toBeGreaterThan(0);
+  // Further assertions could involve checking CSS properties like flex-direction or grid-template-columns
 
-    // Test on a tablet viewport
-    await page.setViewportSize({ width: 768, height: 1024 }); // iPad Mini
-    projectCards = await page.locator('a[href^="/projects/"]').all();
+  
+  // Test on a tablet viewport
+  await page.setViewportSize({ width: 768, height: 1024 }); // iPad Mini
+  projectCards = await page.locator('a[href^="/projects/"]').all();
 
-    // Test on a desktop viewport
-    await page.setViewportSize({ width: 1280, height: 720 }); // Standard Desktop
-    projectCards = await page.locator('a[href^="/projects/"]').all();
-  });
+  // Test on a desktop viewport
+  await page.setViewportSize({ width: 1280, height: 720 }); // Standard Desktop
+  projectCards = await page.locator('a[href^="/projects/"]').all();
 });

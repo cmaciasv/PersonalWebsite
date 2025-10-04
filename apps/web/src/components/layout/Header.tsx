@@ -45,8 +45,8 @@ const Header: React.FC = () => {
         </div>
         <ul
           className={`${
-            isMenuOpen ? 'block' : 'hidden'
-          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary-dark md:bg-transparent flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
+            isMenuOpen ? 'flex' : 'hidden'
+          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary-dark md:bg-transparent flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
         >
           <li>
             <Link href="/" onClick={() => setIsMenuOpen(false)}>

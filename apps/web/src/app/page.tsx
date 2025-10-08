@@ -11,13 +11,27 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-100 sm:text-7xl"
+          className="text-4xl tracking-tighter text-gray-900 dark:text-gray-100 sm:text-7xl"
         >
-          Carlos Macias: Engineer, Creator, Problem-Solver.
+          Hi, I'm Carlos Macias
         </motion.h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-3xl font-bold tracking-tighter text-gray-900 dark:text-gray-100 sm:text-5xl"
+        >
+          Engineer, Creator, Problem-Solver
+        </motion.h1>
+        
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}>
+        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl text-left">
           I build software that delights users, from world-scale AR games to mission-critical financial platforms. With a passion for solving complex challenges and a love for the craft, I create impactful digital experiences. Let&apos;s build something cool together.
         </p>
+        </motion.h1>
         <div className="mt-8 flex items-center justify-center">
           <Link
             href="/projects"

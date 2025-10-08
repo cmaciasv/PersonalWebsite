@@ -12,7 +12,7 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="mailto:Carlos.Macias23@gmail.com"
+            href="mailto:Carlos.Macias23@gmail.com?subject=Hello!"
             className="inline-flex items-center justify-center rounded-md bg-accent-blue px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-blue-dark focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Email Me

@@ -5,11 +5,11 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-primary text-white p-4 mt-8">
-      <div className='flex margin-right-auto'>
-        <div className='text-left text-xs content-center'>
-          &copy; {new Date().getFullYear()} Carlos Macias. All rights reserved.  
+      <div className='flex'>
+        <div className='w-7/16 text-left text-xs content-center'>
+          &copy; {new Date().getFullYear()} Carlos Macias  
         </div>
-        <div className='flex justify-center' style={{ flexGrow: 0.66 }} >
+        <div className='flex-grow-1'>
           <Link href="https://github.com/cmaciasv" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="inline-block mr-4">
             <FaGithub size={32} />
           </Link>

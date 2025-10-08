@@ -8,13 +8,13 @@ export default function AboutPage() {
           About Me
         </h1>
         <div className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl space-y-4">
-          <p>
+          <p className="text-left">
             Senior Software Engineer with over 10 years of experience building consumer-scale products and tools across gaming, AR, and SaaS. A full-stack contributor proficient in backend APIs (Rails/REST) and frontends (React/Unity), with production experience in CI/CD, accessibility (WCAG 2.2 AA), and cloud technologies (Docker/Kubernetes/GCP). Known for shipping complex features, improving reliability, and mentoring teams.
           </p>
           <h2 className="text-3xl font-bold tracking-tighter text-gray-900 dark:text-gray-100 mt-8">
             Skills
           </h2>
-          <ul className="list-disc list-inside text-left mx-auto max-w-md space-y-1">
+          <ul className="list-disc text-left mx-auto max-w-2xl space-y-1 md:text-lg">
             <li><strong>Languages:</strong> C#, TypeScript/JavaScript, Ruby, Java, SQL (MySQL), MongoDB</li>
             <li><strong>Frameworks/Libraries:</strong> Unity, React, Rails</li>
             <li><strong>Cloud/DevOps & Tools:</strong> Docker, Kubernetes, GCP, Git/SVN/TFS, CI/CD, Postman</li>

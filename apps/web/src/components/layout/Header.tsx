@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-primary-dark text-white p-4">
+    <header className="bg-primary text-white p-4">
       <nav aria-label="Main navigation" className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           Carlos Macias
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         <ul
           className={`${
             isMenuOpen ? 'flex' : 'hidden'
-          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary-dark md:bg-transparent flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
+          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary md:bg-transparent flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
         >
           <li>
             <Link href="/" onClick={() => setIsMenuOpen(false)}>

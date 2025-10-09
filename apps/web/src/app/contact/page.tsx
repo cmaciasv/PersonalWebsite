@@ -4,16 +4,16 @@ export default function ContactPage() {
   return (
     <main className="flex-grow flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-8">
       <div className="animate-fade-in-up space-y-4">
-        <h1 className="text-5xl font-bold tracking-tighter text-gray-900 dark:text-gray-100 sm:text-7xl">
+        <h1 className="text-5xl tracking-tighter sm:text-7xl">
           Get in Touch
         </h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl">
+        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl text-justify">
           I&apos;m always open to new opportunities and collaborations. Whether you have a project idea, a question, or just want to connect, feel free to reach out!
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="mailto:Carlos.Macias23@gmail.com?subject=Hello!"
-            className="inline-flex items-center justify-center rounded-md bg-accent-blue px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-blue-dark focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent-teal px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-blue-dark focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Email Me
           </Link>
@@ -21,7 +21,7 @@ export default function ContactPage() {
             href="https://github.com/cmaciasv"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-primary-dark px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-primary-darker focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent-teal px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-primary-darker focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
           >
             GitHub
           </Link>
@@ -29,7 +29,7 @@ export default function ContactPage() {
             href="https://linkedin.com/in/carlosamacias"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-accent-blue-dark px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-blue-darker focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent-teal px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-blue-darker focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
           >
             LinkedIn
           </Link>

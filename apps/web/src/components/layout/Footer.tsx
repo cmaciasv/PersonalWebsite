@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary text-white p-4 mt-8">
+    <footer className="bg-primary text-white p-0 mt-8">
       <div className='flex'>
         <div className='w-7/16 text-left text-xs content-center'>
           &copy; {new Date().getFullYear()} Carlos Macias  

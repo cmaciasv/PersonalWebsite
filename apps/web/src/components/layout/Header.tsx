@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-primary text-white p-4">
+    <header className="bg-primary p-4">
       <nav aria-label="Main navigation" className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           Carlos Macias
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
+            className="focus:outline-none"
             aria-label="Toggle navigation"
           >
             <svg

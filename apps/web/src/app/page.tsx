@@ -14,7 +14,7 @@ export default function HomePage() {
           className="text-4xl tracking-tighter sm:text-7xl"
         >
           <p className='inline-block'>Hi, I'm&nbsp;</p> 
-          <p className='inline-block text-teal-600' > Carlos Macias</p>
+          <p className='inline-block text-white'> Carlos Macias</p>
         </motion.h1>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="mt-8 flex items-center justify-center">
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center rounded-md bg-accent-teal px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-teal-dark focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
             >
               View My Work
             </Link>

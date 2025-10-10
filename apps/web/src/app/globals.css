@@ -2,62 +2,42 @@
 
 :root {
   --background: #111827; /* gray-900 */
-  --foreground: #f3f4f6; /* gray-100 */
-  --primary: #0092b8; /* cyan-600 */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background-dark: #000000; /* black */
+  --foreground: #d1d5db; /* gray-300 */
+  --primary: #00ACC1; /* cyan-600 */
+  --primary-dark: #0097A7; /* cyan-700 */
+  --font-mono: Helvetica, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #111827; /* gray-900 */
+    --background-dark: #000000; /* black */
     --foreground: #d1d5db; /* gray-300 */
-    --primary: #0092b8; /* cyan-600 */
+    --primary: #00ACC1; /* cyan-600 */
+    --primary-dark: #0097A7; /* cyan-700 */
+    --font-mono: Helvetica, monospace;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: sans-serif;
+  font-family: var(--font-mono);
+  user-select: var(--primary);
+  ::selection {
+    background: var(--primary);
+    color: var(--background);
+  }
 }
-
-.link-hover-light {
-  @apply hover:text-gray-100;
+.link-hover-light:hover {
+  color: var(--foreground)
 }
-
-.bg-primary-dark {
-  @apply bg-gray-800;
+.bg-accent {
+  background-color: var(--primary);
+  color: var(--background);
 }
-.bg-accent-teal {
-  @apply bg-teal-700;
-}
-.hover-bg-accent-teal-dark {
-  @apply hover:bg-teal-800;
-}
-.bg-accent-blue {
-  @apply bg-blue-600;
-}
-.hover-bg-accent-blue-dark {
-  @apply hover:bg-blue-700;
-}
-.hover-bg-primary-darker {
-  @apply hover:bg-gray-900;
-}
-.bg-accent-blue-dark {
-  @apply bg-blue-700;
-}
-.hover-bg-accent-blue-darker {
-  @apply hover:bg-blue-800;
-}
-.bg-accent-blue-light {
-  @apply bg-blue-700;
-}
-.hover-bg-accent-blue-dark {
-  @apply hover:bg-blue-800;
+.hover-bg-accent-dark:hover {
+  background-color: var(--primary-dark);
+  color: var(--background-dark);
 }

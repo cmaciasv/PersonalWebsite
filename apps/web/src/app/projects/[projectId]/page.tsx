@@ -30,13 +30,13 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
           href={project.live_demo_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-accent-blue-light hover-bg-accent-blue-dark text-white font-bold py-2 px-4 rounded"
+          className="bg-accent hover-bg-accent-dark font-bold py-2 px-4 rounded"
         >
           Live Demo
         </a>
       )}
       <div className="mt-8">
-        <Link href="/projects" className="text-blue-700 hover:underline">
+        <Link href="/projects" className="hover:underline">
           &larr; Back to Projects
         </Link>
       </div>

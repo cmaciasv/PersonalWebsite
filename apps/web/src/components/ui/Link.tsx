@@ -8,7 +8,7 @@ interface LinkProps extends React.ComponentProps<typeof NextLink> {
 
 const Link: React.FC<LinkProps> = ({ href, children, className, ...props }) => {
   return (
-    <NextLink href={href} className={`link-hover-light ${className || ''}`} {...props}>
+    <NextLink href={href} className={`link-hover ${className || ''}`} {...props}>
       {children}
     </NextLink>
   );

@@ -7,7 +7,7 @@ export default function ContactPage() {
         <h1 className="text-5xl tracking-tighter sm:text-7xl">
           Get in Touch
         </h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-xl text-justify">
+        <p className="max-w-2xl mx-auto text-lg text-gray-500 md:text-xl text-justify">
           I&apos;m always open to new opportunities and collaborations. Whether you have a project idea, a question, or just want to connect, feel free to reach out!
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

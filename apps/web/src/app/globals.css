@@ -30,8 +30,9 @@ body {
     color: var(--background);
   }
 }
-.link-hover-light:hover {
-  color: var(--foreground)
+.link-hover:hover {
+  color: var(--foreground);
+  text-decoration: underline;
 }
 .bg-accent {
   background-color: var(--primary);

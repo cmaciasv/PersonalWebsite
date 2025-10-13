@@ -4,7 +4,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Personal Portfolio Website",
+  title: "Carlos Macias Portfolio - Home",
   description: "A personal website to showcase my projects and skills.",
 };
 

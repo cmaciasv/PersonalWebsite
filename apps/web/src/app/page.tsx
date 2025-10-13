@@ -25,27 +25,25 @@ export default function HomePage() {
           Engineer, Creator, Problem-Solver
         </motion.h1>
         
-        <motion.h1
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}>
-          <p className="max-w-2xl mx-auto text-lg text-gray-500 md:text-xl text-justify">
-            I build software that delights users, from world-scale AR games to mission-critical financial platforms. With a passion for solving complex challenges and a love for the craft, I create impactful digital experiences. Let&apos;s build something cool together.
-          </p>
-        </motion.h1>
-        <motion.h1
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="max-w-2xl mx-auto text-lg text-gray-500 md:text-xl text-justify">
+          I build software that delights users, from world-scale AR games to mission-critical financial platforms. With a passion for solving complex challenges and a love for the craft, I create impactful digital experiences. Let&apos;s build something cool together.
+        </motion.p>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}>
-          <div className="mt-8 flex items-center justify-center">
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-            >
-              View My Work
-            </Link>
-          </div>
-        </motion.h1>
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mt-8 flex items-center justify-center">
+          <Link
+            href="/projects"
+            className="no-underline inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+          >
+            View My Work
+          </Link>
+        </motion.div>
       </div>
     </main>
   );

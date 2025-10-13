@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from '../ui/Logo';
 import Link from '../ui/Link';
 import { useState } from 'react';
 
@@ -9,8 +10,8 @@ const Header: React.FC = () => {
   return (
     <header className="bg-primary p-4">
       <nav aria-label="Main navigation" className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
-          Carlos Macias
+        <Link href="/">
+          <Logo />
         </Link>
         <div className="md:hidden">
           <button
@@ -46,7 +47,7 @@ const Header: React.FC = () => {
         <ul
           className={`${
             isMenuOpen ? 'flex' : 'hidden'
-          } md:flex absolute md:relative top-16 md:top-auto left-0 md:left-auto w-full md:w-auto bg-primary md:bg-transparent flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
+          } md:flex absolute md:relative top-9 md:top-auto right-0 md:left-auto w-auto bg-gray-900 md:bg-gray-900 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0`}
         >
           <li>
             <Link href="/" onClick={() => setIsMenuOpen(false)}>

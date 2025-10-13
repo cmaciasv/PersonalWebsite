@@ -10,13 +10,14 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Link href={`/projects/${project.id}`}>
-      <div className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className="flex flex-grow flex-col items-center rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
         <Image
           src={project.image_url}
           alt="" 
           width={300}
           height={200}
-          className="rounded-md object-cover w-full h-48"
+          priority={false}
+          className="w-md rounded-md object-cover items-center"
         />
         <h2 className="h3 mt-4 text-xl font-semibold">{project.title}</h2>
       </div>

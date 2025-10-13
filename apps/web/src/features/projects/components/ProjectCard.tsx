@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           width={300}
           height={200}
           priority={false}
-          className="w-md rounded-md object-cover items-center"
+          className="max-w-md rounded-md object-cover items-center"
         />
         <h2 className="h3 mt-4 text-xl font-semibold">{project.title}</h2>
       </div>

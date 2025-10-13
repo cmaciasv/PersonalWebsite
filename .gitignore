@@ -93,12 +93,6 @@ public/
 # Vuepress build output
 .vuepress/dist
 
-# High-resolution images
-*.jpeg
-*.png
-*.webp
-*.gif
-*.svg
 
 # Comment out if you don't want to ignore the build output
 # build/

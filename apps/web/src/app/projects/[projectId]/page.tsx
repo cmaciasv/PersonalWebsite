@@ -4,13 +4,11 @@ import { getProjectById } from '../../../lib/data';
 import { notFound } from 'next/navigation';
 
 interface ProjectDetailPageProps {
-  params: { projectId: string };
+  params: Promise<{ projectId: string }>;
 }
 
 const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
-  // Explicitly await params to satisfy Next.js linter, even though it's typically an object.
-  const resolvedParams = await params;
-  const projectId: string = resolvedParams.projectId;
+  const { projectId } = await params;
   const project = await getProjectById(projectId);
 
   if (!project) {

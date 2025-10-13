@@ -13,7 +13,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl tracking-tighter sm:text-7xl"
         >
-          <p className='inline-block'>Hi, I'm&nbsp;</p> 
+          <p className='inline-block'>Hi, I&apos;m&nbsp;</p> 
           <p className='inline-block text-white'> Carlos Macias</p>
         </motion.h1>
         <motion.h1

@@ -24,13 +24,13 @@ describe('Link Component', () => {
   it('applies the default link-hover-light class', () => {
     render(<Link href="/test">Test Link</Link>);
     const linkElement = screen.getByText('Test Link');
-    expect(linkElement).toHaveClass('link-hover-light');
+    expect(linkElement).toHaveClass('link-hover');
   });
 
   it('applies additional className props', () => {
     render(<Link href="/test" className="custom-class">Test Link</Link>);
     const linkElement = screen.getByText('Test Link');
-    expect(linkElement).toHaveClass('link-hover-light');
+    expect(linkElement).toHaveClass('link-hover');
     expect(linkElement).toHaveClass('custom-class');
   });
 

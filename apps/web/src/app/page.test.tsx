@@ -3,12 +3,16 @@ import HomePage from './page';
 import { describe, it, expect } from 'vitest';
 
 describe('HomePage', () => {
-  it('renders the main heading', () => {
+  it('renders the main headings', () => {
     render(<HomePage />);
-    const heading = screen.getByRole('heading', {
-      name: /Carlos Macias: Engineer, Creator, Problem-Solver./i,
+    const heading1 = screen.getByRole('heading', {
+      name: /Hi, I'm Carlos Macias/i,
     });
-    expect(heading).toBeInTheDocument();
+    const heading2 = screen.getByRole('heading', {
+      name: /Engineer, Creator, Problem-Solver/i,
+    });
+    expect(heading1).toBeInTheDocument();
+    expect(heading2).toBeInTheDocument();
   });
 
   it('renders the introductory paragraph', () => {
@@ -31,14 +35,19 @@ describe('HomePage', () => {
     expect(button).toHaveAttribute('href', '/projects');
   });
 
-  it('applies fade-in animation to the main heading', () => {
+  it('applies fade-in animation to the main headings', () => {
     render(<HomePage />);
-    const heading = screen.getByRole('heading', {
-      name: /Carlos Macias: Engineer, Creator, Problem-Solver./i,
+    const heading1 = screen.getByRole('heading', {
+      name: /Hi, I'm Carlos Macias/i,
+    });
+    const heading2 = screen.getByRole('heading', {
+      name: /Engineer, Creator, Problem-Solver/i,
     });
 
     // Check for initial animation properties (Framer Motion applies these as inline styles)
-    expect(heading).toHaveStyle('opacity: 0');
-    expect(heading).toHaveStyle('transform: translateY(20px)');
+    expect(heading1).toHaveStyle('opacity: 0');
+    expect(heading1).toHaveStyle('transform: translateY(20px)');
+    expect(heading2).toHaveStyle('opacity: 0');
+    expect(heading2).toHaveStyle('transform: translateY(20px)');
   });
 });

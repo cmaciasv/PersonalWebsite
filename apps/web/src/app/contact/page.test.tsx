@@ -21,7 +21,7 @@ describe('ContactPage', () => {
     render(<ContactPage />);
     const emailLink = screen.getByRole('link', { name: /Email Me/i });
     expect(emailLink).toBeInTheDocument();
-    expect(emailLink).toHaveAttribute('href', 'mailto:Carlos.Macias23@gmail.com');
+    expect(emailLink).toHaveAttribute('href', 'mailto:Carlos.Macias23@gmail.com?subject=Hello!');
   });
 
   it('renders the GitHub link with correct href', () => {

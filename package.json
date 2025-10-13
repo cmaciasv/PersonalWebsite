@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "turbo run test",
-    "dev:web": "npm run dev --workspace=apps/web"
+    "dev:web": "npm run dev --workspace=apps/web",
+    "postinstall": "npm rebuild"
   },
   "repository": {
     "type": "git",

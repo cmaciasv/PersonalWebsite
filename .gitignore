@@ -88,13 +88,18 @@ dist/
 
 # Gatsby files
 .cache/
-public/
-!apps/web/public/images/projects/project-1.png
-!apps/web/public/images/projects/project-2.png
+#public/
 
 # Vuepress build output
 .vuepress/dist
 
+# High-resolution images
+*.jpeg
+#*.png
+*.webp
+*.gif
+*.svg
+*.xcf
 
 # Comment out if you don't want to ignore the build output
 # build/

@@ -39,7 +39,7 @@ test.describe('Responsive Design', () => {
     await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
 
     // Check Home page content
-    await expect(page.getByRole('heading', { name: 'Hi, I\'m  Carlos Macias' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Hi, I\'m Carlos Macias' })).toBeVisible();
     await expect(page.getByText('I build software that delights users')).toBeVisible();
 
     // Navigate to About page and check content

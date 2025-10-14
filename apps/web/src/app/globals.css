@@ -36,7 +36,7 @@ body {
 }
 .bg-accent {
   background-color: var(--primary);
-  color: var(--background);
+  color: var(--background-dark);
 }
 .hover-bg-accent-dark:hover {
   background-color: var(--primary-dark);

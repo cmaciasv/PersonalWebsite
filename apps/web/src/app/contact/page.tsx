@@ -27,7 +27,7 @@ export default function ContactPage() {
           className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="mailto:Carlos.Macias23@gmail.com?subject=Hello!"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark"
           >
             Email Me
           </Link>
@@ -35,7 +35,7 @@ export default function ContactPage() {
             href="https://github.com/cmaciasv"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark"
           >
             GitHub
           </Link>
@@ -43,7 +43,7 @@ export default function ContactPage() {
             href="https://linkedin.com/in/carlosamacias"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:scale-105 hover-bg-accent-dark"
           >
             LinkedIn
           </Link>

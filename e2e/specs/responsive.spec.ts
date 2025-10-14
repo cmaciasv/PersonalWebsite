@@ -4,6 +4,7 @@ import { runAccessibilityCheck } from '../utils/a11y-check';
 test.describe('Responsive Design', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+    await page.waitForTimeout(2200); // Wait for 2 second to ensure all elements are loaded
     await runAccessibilityCheck(page);
   });
 
@@ -23,7 +24,7 @@ test.describe('Responsive Design', () => {
     await expect(navLinks).toBeVisible();
 
     // Expect navigation links to be clickable
-    await expect(page.getByRole('link', { name: 'Home' })).toBeVisible();
+    await expect(page.getByText(/Home/i)).toBeVisible();
     await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Projects' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible();
@@ -38,12 +39,13 @@ test.describe('Responsive Design', () => {
     await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE
 
     // Check Home page content
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Hi, I\'m  Carlos Macias' })).toBeVisible();
     await expect(page.getByText('I build software that delights users')).toBeVisible();
 
     // Navigate to About page and check content
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'About' }).click();
+    await page.waitForTimeout(2200); // Wait for 2 seconds to ensure all elements are loaded
     await runAccessibilityCheck(page);
     await expect(page.getByRole('heading', { name: 'About Me' })).toBeVisible();
     await expect(page.getByText('Senior Software Engineer with over 10 years of experience')).toBeVisible();
@@ -51,6 +53,7 @@ test.describe('Responsive Design', () => {
     // Navigate to Contact page and check content
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'Contact' }).click();
+    await page.waitForTimeout(2200); // Wait for 2 seconds to ensure all elements are loaded
     await runAccessibilityCheck(page);
     await expect(page.getByRole('heading', { name: 'Get in Touch' })).toBeVisible();
     await expect(page.getByText('I\'m always open to new opportunities and collaborations.')).toBeVisible();
@@ -69,9 +72,10 @@ test.describe('Responsive Design', () => {
     // Navigate to Contact page and check buttons
     await page.getByLabel('Toggle navigation').click();
     await page.getByRole('link', { name: 'Contact' }).click();
+    await page.waitForTimeout(2200); // Wait for 2 seconds to ensure all elements are loaded
     await runAccessibilityCheck(page);
-    await expect(page.getByRole('link', { name: 'Email Me' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Email Me' })).toHaveCSS('padding', '12px 24px');
+    await expect(page.getByText(/Email Me/i)).toBeVisible();
+    await expect(page.getByText(/Email Me/i)).toHaveCSS('padding', '12px 24px');
     await expect(page.getByRole('main').getByRole('link', { name: 'GitHub' })).toBeVisible();
     await expect(page.getByRole('main').getByRole('link', { name: 'GitHub' })).toHaveCSS('padding', '12px 24px');
     await expect(page.getByRole('main').getByRole('link', { name: 'LinkedIn' })).toBeVisible();

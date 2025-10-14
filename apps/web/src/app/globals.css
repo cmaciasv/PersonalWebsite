@@ -3,7 +3,7 @@
 :root {
   --background: #111827; /* gray-900 */
   --background-dark: #000000; /* black */
-  --foreground: #d1d5db; /* gray-300 */
+  --foreground: #EBE6E7; /* gray-200 */
   --primary: #00ACC1; /* cyan-600 */
   --primary-dark: #0097A7; /* cyan-700 */
   --font-mono: Helvetica, monospace;
@@ -13,7 +13,7 @@
   :root {
     --background: #111827; /* gray-900 */
     --background-dark: #000000; /* black */
-    --foreground: #d1d5db; /* gray-300 */
+    --foreground: #EBE6E7; /* gray-200 */
     --primary: #00ACC1; /* cyan-600 */
     --primary-dark: #0097A7; /* cyan-700 */
     --font-mono: Helvetica, monospace;

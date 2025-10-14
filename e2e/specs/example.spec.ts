@@ -6,6 +6,6 @@ test('has title', async ({ page }) => {
   await runAccessibilityCheck(page);
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle("Personal Portfolio Website");
+  await expect(page).toHaveTitle("Carlos Macias Portfolio - Home");
 });
 

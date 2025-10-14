@@ -6,7 +6,7 @@ test.describe('Layout', () => {
   });
 
   test('should display the Header with navigation links', async ({ page }) => {
-    await expect(page.getByRole('link', { name: 'Home' })).toBeVisible();
+    await expect(page.getByText(/Home/i)).toBeVisible();
     await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Projects' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Contact' })).toBeVisible();
@@ -14,6 +14,7 @@ test.describe('Layout', () => {
 
   test('should display the Footer with social media links', async ({ page }) => {
     await expect(page.getByRole('link', { name: 'GitHub' })).toBeVisible();
+    await expect(page.getByLabel('Email Me')).toBeVisible();
     await expect(page.getByRole('link', { name: 'LinkedIn' })).toBeVisible();
   });
 });

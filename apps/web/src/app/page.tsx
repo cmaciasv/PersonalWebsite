@@ -29,7 +29,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="max-w-2xl mx-auto text-lg text-gray-500 md:text-xl text-justify">
+          className="max-w-2xl mx-auto text-lg md:text-xl text-justify text-gray-200">
           I build software that delights users, from world-scale AR games to mission-critical financial platforms. With a passion for solving complex challenges and a love for the craft, I create impactful digital experiences. Let&apos;s build something cool together.
         </motion.p>
         <motion.div

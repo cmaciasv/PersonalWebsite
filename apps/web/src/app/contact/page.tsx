@@ -17,7 +17,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-2xl mx-auto text-lg text-gray-500 md:text-xl text-justify">
+          className="max-w-2xl mx-auto text-lg text-gray-300 md:text-xl text-justify">
           I&apos;m always open to new opportunities and collaborations. Whether you have a project idea, a question, or just want to connect, feel free to reach out!
         </motion.p>
         <motion.div

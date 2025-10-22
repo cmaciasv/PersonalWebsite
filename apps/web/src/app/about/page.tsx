@@ -10,10 +10,10 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl tracking-tighter sm:text-7xl">
+          className="text-7xl tracking-tighter">
           About Me
         </motion.h1>
-        <div className="max-w-3xl mx-auto text-lg md:text-xl space-y-4">
+        <div className="max-w-3xl mx-auto text-xl space-y-4">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="list-disc text-left mx-auto max-w-2xl space-y-1 md:text-lg text-gray-300">
+            className="list-disc text-left mx-auto max-w-2xl tracking-tighter space-y-1 text-xl text-gray-300">
             <li><strong>Languages:</strong> C#, TypeScript/JavaScript, Ruby, Java, SQL (MySQL), MongoDB</li>
             <li><strong>Frameworks/Libraries:</strong> Unity, React, Rails</li>
             <li><strong>Cloud/DevOps & Tools:</strong> Docker, Kubernetes, GCP, Git/SVN/TFS, CI/CD, Postman</li>

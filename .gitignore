@@ -95,7 +95,7 @@ dist/
 
 # High-resolution images
 *.jpeg
-#*.png
+*.png
 *.webp
 *.gif
 *.svg

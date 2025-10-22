@@ -5,12 +5,11 @@ import React, { useState } from 'react';
 interface YouTubeEmbedProps {
   videoId: string;
   title: string;
+  thumbnailUrl: string;
 }
 
-const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title }) => {
+const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title, thumbnailUrl }) => {
   const [playerReady, setPlayerReady] = useState(false);
-
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
   return (

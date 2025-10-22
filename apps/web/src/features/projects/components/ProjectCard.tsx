@@ -14,10 +14,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const onMouseLeave = () => setIsHovered(false);
   return (
     <Link href={`/projects/${project.id}`}>
-      <div className="flex flex-grow flex-col items-center rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}>
+      <div className="flex flex-grow flex-col items-center rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
         <Image
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
           src={isHovering ? (project.gif_url ?? '') : project.image_url}
           alt=""
           width={1280}

@@ -1,5 +1,4 @@
 import Link from '../../../components/ui/Link';
-import Image from 'next/image';
 import { getProjectById } from '../../../lib/data';
 import { notFound } from 'next/navigation';
 import YouTubeEmbed from '../../../components/ui/YouTubeEmbed';
@@ -21,7 +20,11 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
       <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
       <p className="text-lg mb-4 text-center">{project.short_description}</p>
       {project.youtube_video_id && (
-        <YouTubeEmbed videoId={project.youtube_video_id} title={project.title} thumbnailUrl={project.gif_url ?? ''} />
+        <YouTubeEmbed 
+        videoId={project.youtube_video_id} 
+        title={project.title} 
+        thumbnailUrl={project.image_url} 
+        gifUrl={project.gif_url ?? ""} />
       )}
       <div className="prose lg:prose-xl mb-8 items-center mx-auto">
         <p>{project.case_study_content}</p>

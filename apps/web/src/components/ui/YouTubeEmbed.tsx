@@ -16,7 +16,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title, thumbnailUr
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
   return (
-    <div className="relative w-[90%] mx-auto aspect-video bg-gray-800 rounded-lg overflow-hidden">
+    <div className="relative w-[90%] mx-auto aspect-video rounded-lg overflow-hidden mb-4">
       {!playerReady && (
         <div
           className="absolute inset-0 flex items-center justify-center cursor-pointer"

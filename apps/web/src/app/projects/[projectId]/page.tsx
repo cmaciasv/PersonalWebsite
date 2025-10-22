@@ -18,7 +18,6 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
   return (
     <main className="flex flex-grow flex-col justify-center p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">{project.title}</h1>
-      <p className="text-lg mb-4 text-center">{project.short_description}</p>
       {project.youtube_video_id && (
         <YouTubeEmbed 
         videoId={project.youtube_video_id} 
@@ -26,7 +25,8 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
         thumbnailUrl={project.image_url} 
         gifUrl={project.gif_url ?? ""} />
       )}
-      <div className="prose lg:prose-xl mb-8 items-center mx-auto">
+      <p className="text-lg mb-4 w-[90%] mx-auto">{project.short_description}</p>
+      <div className="text-lg mb-4 w-[90%] mx-auto">
         <p>{project.case_study_content}</p>
       </div>
       {project.live_demo_url && (

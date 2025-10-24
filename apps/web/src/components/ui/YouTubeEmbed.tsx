@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface YouTubeEmbedProps {
@@ -24,10 +24,13 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, title, thumbnailUr
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <img
+          <Image
             src={isHovering ? gifUrl : thumbnailUrl}
             alt={`Thumbnail for ${title}`}
-            className="w-full h-full object-cover"
+            width={1280}
+            height={720}
+            priority={false}
+            className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">

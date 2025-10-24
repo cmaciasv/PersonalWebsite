@@ -18,8 +18,8 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-justify">
-            Senior Software Engineer with over 10 years of experience building consumer-scale products and tools across gaming, AR, and SaaS. A full-stack contributor proficient in backend APIs (Rails/REST) and frontends (React/Unity), with production experience in CI/CD, accessibility (WCAG 2.2 AA), and cloud technologies (Docker/Kubernetes/GCP). Known for shipping complex features, improving reliability, and mentoring teams.
+            className="text-left">
+            Senior Software Engineer with over 10 years of experience building consumer-scale products and tools across gaming, AR, and SaaS. A full-stack contributor proficient in backend APIs (Rails/REST) and frontends (React/Unity), with production experience in CI/CD, accessibility (WCAG 2.2 AA), and cloud technologies (Docker, Kubernetes & GCP). Known for shipping complex features, improving reliability, and mentoring teams.
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

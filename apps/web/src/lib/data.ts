@@ -38,7 +38,7 @@ export const projects: Project[] = [
     id: "2",
     title: "Car Town Racing",
     short_description: `**Car Town Racing** was a free-to-play mobile arcade racer developed at Glu after 
-      its acquisition of Cie Games (the team behind Car Town/Racing Rivals). Built in Unity/C#, it 
+      its acquisition of Cie Games (the team behind Car Town/Racing Rivals). Built in **Unity/C#**, it 
       blended drift racing, car collection, and live events with short, high-intensity tracks designed 
       for iOS/Android. The title soft-launched in select markets, showcasing licensed cars, upgrade systems, 
       and event modes; community gameplay videos capture its look/feel even though distribution stayed limited.`,
